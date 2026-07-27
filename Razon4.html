@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Razón #4 ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#4CAF50,#81C784,#F8BBD0,#F48FB1);
+background-size:400% 400%;
+animation:fondo 15s infinite alternate;
+overflow-x:hidden;
+color:white;
+
+}
+
+@keyframes fondo{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+/* ===== MENÚ ===== */
+
+header{
+
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:20px;
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+nav ul{
+
+display:flex;
+justify-content:center;
+gap:20px;
+list-style:none;
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+padding:12px 20px;
+border-radius:30px;
+transition:.4s;
+
+}
+
+nav a:hover{
+
+background:#ff4d6d;
+transform:translateY(-5px);
+
+}
+
+.contenedor{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px;
+text-align:center;
+
+}
+
+h1{
+
+font-size:55px;
+text-shadow:0 0 20px white;
+margin-bottom:20px;
+
+}
+
+.subtitulo{
+
+font-size:24px;
+margin-bottom:40px;
+
+}
+
+/* ===== ROSA ===== */
+
+.rosa{
+
+width:220px;
+height:220px;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:150px;
+cursor:pointer;
+transition:1s;
+animation:latido 3s infinite;
+
+}
+
+@keyframes latido{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+
+}
+
+.rosa:hover{
+
+transform:scale(1.15) rotate(-8deg);
+
+}
+
+.mensaje{
+
+display:none;
+margin-top:40px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+font-size:22px;
+line-height:1.8;
+
+}
+
+#texto{
+
+white-space:pre-line;
+
+}
+/* ===== FOTO ===== */
+
+.foto{
+
+width:360px;
+height:360px;
+object-fit:cover;
+display:block;
+margin:40px auto;
+border-radius:20px;
+box-shadow:0 0 35px rgba(255,255,255,.8);
+transition:.5s;
+
+}
+
+.foto:hover{
+
+transform:scale(1.08) rotate(2deg);
+
+}
+
+/* ===== TARJETA MÚSICA ===== */
+
+.spotify-card{
+
+width:800px;
+max-width:95%;
+margin:40px auto;
+display:flex;
+align-items:center;
+gap:20px;
+padding:20px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 25px rgba(255,255,255,.3);
+
+}
+
+.cover{
+
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+
+}
+
+.cover:hover{
+
+transform:rotate(5deg) scale(1.05);
+
+}
+
+.info{
+
+flex:1;
+text-align:left;
+
+}
+
+.info h2{
+
+font-size:30px;
+margin-bottom:10px;
+
+}
+
+.info h3{
+
+font-size:24px;
+margin-bottom:10px;
+
+}
+
+.info p{
+
+font-size:20px;
+margin-bottom:15px;
+
+}
+
+.info audio{
+
+width:100%;
+
+}
+
+/* ===== BOTONES ===== */
+
+.botones{
+
+margin-top:40px;
+
+}
+
+.botones a{
+
+text-decoration:none;
+
+}
+
+.botones button{
+
+padding:15px 35px;
+margin:10px;
+font-size:20px;
+border:none;
+border-radius:35px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.botones button:hover{
+
+background:#ff1744;
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 20px #ff4d6d;
+
+}
+
+/* ===== PÉTALOS ===== */
+
+.petalo{
+
+position:fixed;
+top:-40px;
+font-size:25px;
+pointer-events:none;
+animation:caer linear forwards;
+
+}
+
+@keyframes caer{
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(360deg);
+opacity:0;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.foto{
+
+width:280px;
+height:280px;
+
+}
+
+.spotify-card{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.info{
+
+text-align:center;
+
+}
+
+.cover{
+
+width:150px;
+height:150px;
+
+}
+
+.rosa{
+
+font-size:120px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<ul>
+
+<li><a href="Inicio.html">🏠 Inicio</a></li>
+<li><a href="Razon1.html">❤️ Razón 1</a></li>
+<li><a href="Razon2.html">🕰️ Razón 2</a></li>
+<li><a href="Razon3.html">🌙 Razón 3</a></li>
+<li><a href="Razon4.html">🌹 Razón 4</a></li>
+<li><a href="Razon5.html">💖 Razón 5</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<div class="contenedor">
+
+<h1>🌹 Razón #4</h1>
+
+<p class="subtitulo">
+
+Porque haces florecer mi corazón 
+
+</p>
+
+<div class="rosa" id="rosa" onclick="abrirRosa()">
+
+🌹
+
+</div>
+
+<div class="mensaje" id="mensaje">
+
+<h2> Porque haces florecer mi corazón </h2>
+
+<br>
+
+<p id="texto"></p>
+
+<img src="Imagenes/imagen2.jpg" class="foto">
+
+<div class="spotify-card">
+
+<img src="Portada/portada5.jfif" class="cover">
+
+<div class="info">
+
+
+<h3>Favorita de Dios</h3>
+
+<p>Roa y dei v</p>
+
+<audio controls>
+
+<source src="musica/Roa Ft. Dei V - La Favorita De Dios.mp3" type="audio/mpeg">
+
+</audio>
+
+</div>
+
+</div>
+
+<div class="botones">
+
+<a href="razon3.html">
+
+<button>⬅️ Anterior</button>
+
+</a>
+
+<a href="razon5.html">
+
+<button>💖 Última Razón</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+<script>
+
+const mensaje = `
+
+🌹 Porque haces florecer mi corazón ❤️
+
+Antes de conocerte,
+mi vida era diferente.
+
+Pero desde que llegaste,
+todo comenzó a llenarse
+de colores,
+sonrisas
+y momentos inolvidables.
+
+Eres esa persona
+que hace crecer lo mejor de mí.
+
+Gracias por hacer que mi corazón brille cada día.
+
+No hay un solo día
+en el que no agradezca
+haberte conocido.
+
+Te amo mucho mi negra . ❤️
+
+`;
+
+let i = 0;
+
+function abrirRosa(){
+
+    const rosa = document.getElementById("rosa");
+
+    rosa.style.transform = "scale(1.5) rotate(360deg)";
+    rosa.style.filter = "drop-shadow(0 0 30px #ff4d6d)";
+
+    crearPetalos();
+
+    setTimeout(()=>{
+
+        rosa.style.display = "none";
+
+        document.getElementById("mensaje").style.display = "block";
+
+        escribirTexto();
+
+    },1000);
+
+}
+
+function escribirTexto(){
+
+    if(i < mensaje.length){
+
+        document.getElementById("texto").innerHTML += mensaje.charAt(i);
+
+        i++;
+
+        setTimeout(escribirTexto,35);
+
+    }
+
+}
+
+/* ===== PÉTALOS ===== */
+
+function crearPetalos(){
+
+    const flores=["🌸","🌺","🌹","🍃","💖"];
+
+    for(let i=0;i<60;i++){
+
+        const petalo=document.createElement("div");
+
+        petalo.classList.add("petalo");
+
+        petalo.innerHTML=flores[Math.floor(Math.random()*flores.length)];
+
+        petalo.style.left=Math.random()*100+"vw";
+
+        petalo.style.fontSize=(20+Math.random()*20)+"px";
+
+        petalo.style.animationDuration=(5+Math.random()*5)+"s";
+
+        petalo.style.animationDelay=Math.random()*2+"s";
+
+        document.body.appendChild(petalo);
+
+        setTimeout(()=>{
+
+            petalo.remove();
+
+        },10000);
+
+    }
+
+}
+
+/* ===== LLUVIA CONTINUA ===== */
+
+setInterval(()=>{
+
+    const flor=document.createElement("div");
+
+    flor.classList.add("petalo");
+
+    flor.innerHTML=["🌸","🌺","🍃","💖"][Math.floor(Math.random()*4)];
+
+    flor.style.left=Math.random()*100+"vw";
+
+    flor.style.fontSize=(18+Math.random()*18)+"px";
+
+    flor.style.animationDuration=(5+Math.random()*4)+"s";
+
+    document.body.appendChild(flor);
+
+    setTimeout(()=>{
+
+        flor.remove();
+
+    },9000);
+
+},300);
+
+</script>
+
+</body>
+</html>

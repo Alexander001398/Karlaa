@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Razón #3 ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#020024,#090979,#000428,#004e92);
+background-size:400% 400%;
+animation:fondo 15s infinite alternate;
+overflow-x:hidden;
+color:white;
+
+}
+
+@keyframes fondo{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+/* MENU */
+
+header{
+
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:20px;
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+nav ul{
+
+display:flex;
+justify-content:center;
+gap:20px;
+list-style:none;
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+padding:12px 20px;
+border-radius:30px;
+transition:.4s;
+
+}
+
+nav a:hover{
+
+background:#ff4d6d;
+transform:translateY(-5px);
+
+}
+
+.contenedor{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px;
+text-align:center;
+
+}
+
+h1{
+
+font-size:55px;
+text-shadow:0 0 20px white;
+margin-bottom:20px;
+
+}
+
+.subtitulo{
+
+font-size:24px;
+margin-bottom:40px;
+
+}
+
+/* LUNA */
+
+.luna{
+
+width:260px;
+height:260px;
+margin:auto;
+border-radius:50%;
+background:radial-gradient(circle,#fff,#ddd,#bbb);
+box-shadow:0 0 80px white;
+cursor:pointer;
+transition:1s;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+color:#333;
+font-weight:bold;
+animation:latido 3s infinite;
+
+}
+
+@keyframes latido{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+
+}
+
+.luna:hover{
+
+transform:scale(1.1);
+
+}
+
+/* MENSAJE */
+
+.mensaje{
+
+display:none;
+margin-top:50px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:25px;
+font-size:22px;
+line-height:1.8;
+
+}
+
+#texto{
+
+white-space:pre-line;
+
+}
+/* ===== FOTO ===== */
+
+.foto{
+
+width:360px;
+height:360px;
+object-fit:cover;
+margin:40px auto;
+display:block;
+border-radius:20px;
+box-shadow:0 0 35px rgba(255,255,255,.9);
+transition:.5s;
+
+}
+
+.foto:hover{
+
+transform:scale(1.08) rotate(2deg);
+
+}
+
+/* ===== TARJETA DE MÚSICA ===== */
+
+.spotify-card{
+
+width:800px;
+max-width:95%;
+margin:40px auto;
+display:flex;
+align-items:center;
+gap:20px;
+padding:20px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border-radius:25px;
+box-shadow:0 0 25px rgba(255,255,255,.3);
+
+}
+
+.cover{
+
+width:180px;
+height:180px;
+border-radius:20px;
+object-fit:cover;
+transition:.5s;
+
+}
+
+.cover:hover{
+
+transform:rotate(5deg) scale(1.05);
+
+}
+
+.info{
+
+flex:1;
+text-align:left;
+
+}
+
+.info h2{
+
+font-size:30px;
+margin-bottom:10px;
+
+}
+
+.info h3{
+
+font-size:24px;
+margin-bottom:10px;
+
+}
+
+.info p{
+
+font-size:20px;
+margin-bottom:15px;
+
+}
+
+.info audio{
+
+width:100%;
+
+}
+
+/* ===== BOTONES ===== */
+
+.botones{
+
+margin-top:40px;
+
+}
+
+.botones a{
+
+text-decoration:none;
+
+}
+
+.botones button{
+
+padding:15px 35px;
+margin:10px;
+font-size:20px;
+border:none;
+border-radius:35px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+transition:.5s;
+
+}
+
+.botones button:hover{
+
+background:#ff1744;
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 20px #ff4d6d;
+
+}
+
+/* ===== ESTRELLAS ===== */
+
+.estrella{
+
+position:fixed;
+color:#fff;
+animation:caer linear forwards;
+pointer-events:none;
+
+}
+
+@keyframes caer{
+
+0%{
+
+transform:translateY(-100px);
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh);
+opacity:0;
+
+}
+
+}
+
+/* ===== DESTELLOS ===== */
+
+.destello{
+
+position:absolute;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+box-shadow:0 0 15px white;
+animation:brillar 2s infinite;
+
+}
+
+@keyframes brillar{
+
+0%,100%{
+
+opacity:.2;
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(2);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.luna{
+
+width:200px;
+height:200px;
+font-size:22px;
+
+}
+
+.spotify-card{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.info{
+
+text-align:center;
+
+}
+
+.cover{
+
+width:150px;
+height:150px;
+
+}
+
+.foto{
+
+width:280px;
+height:280px;
+
+}
+
+h1{
+
+font-size:40px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<ul>
+
+<li><a href="Inicio.html">🏠 Inicio</a></li>
+<li><a href="Razon1.html">❤️ Razón 1</a></li>
+<li><a href="Razon2.html">🕰️ Razón 2</a></li>
+<li><a href="Razon3.html">🌙 Razón 3</a></li>
+<li><a href="Razon4.html">🌹 Razón 4</a></li>
+<li><a href="Razon5.html">💖 Razón 5</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<div class="contenedor">
+
+<h1>🌙 Razón #3</h1>
+
+<p class="subtitulo">
+
+Porque contigo encontré mi lugar seguro ❤️
+
+</p>
+
+<div class="luna" id="luna" onclick="abrirMensaje()">
+
+🌙
+
+</div>
+
+<div class="mensaje" id="mensaje">
+
+<h2>❤️ Mi lugar favorito eres tú ❤️</h2>
+
+<br>
+
+<p id="texto"></p>
+
+<img src="Imagenes/imagen3.jpg" class="foto">
+
+<div class="spotify-card">
+
+<img src="Portada/portada4.jfif" class="cover">
+
+<div class="info">
+
+<h2>🎵 Nuestra Canción</h2>
+
+<h3>Perfect</h3>
+
+<p>Ed Sheeran</p>
+
+<audio controls>
+
+<source src="musica/07 - Especial.mp3" type="audio/mpeg">
+
+</audio>
+
+</div>
+
+</div>
+
+<div class="botones">
+
+<a href="razon2.html">
+
+<button>⬅️ Anterior</button>
+
+</a>
+
+<a href="razon4.html">
+
+<button>Siguiente ➡️</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+<script>
+
+const mensaje = `
+
+❤️ Porque contigo encontré mi lugar seguro ❤️
+ 
+con el tiempo me di cuenta que siempre fuiste la persona con la que quiero siempre estar y con la persona que quiero compartir el resto de mi vida .
+
+Gracias por convertirte
+en mi lugar favorito.
+
+Te amo muchísimo. ❤️
+
+`;
+
+let i = 0;
+
+function abrirMensaje(){
+
+    const luna = document.getElementById("luna");
+
+    luna.style.transform="scale(1.3)";
+    luna.style.boxShadow="0 0 180px white";
+
+    crearDestellos();
+
+    setTimeout(()=>{
+
+        luna.style.display="none";
+
+        document.getElementById("mensaje").style.display="block";
+
+        escribirTexto();
+
+    },1000);
+
+}
+
+function escribirTexto(){
+
+    if(i < mensaje.length){
+
+        document.getElementById("texto").innerHTML += mensaje.charAt(i);
+
+        i++;
+
+        setTimeout(escribirTexto,35);
+
+    }
+
+}
+
+/* ===== ESTRELLAS ===== */
+
+function crearEstrella(){
+
+    const estrella=document.createElement("div");
+
+    estrella.classList.add("estrella");
+
+    const iconos=["⭐","✨","🌟","💖"];
+
+    estrella.innerHTML=iconos[Math.floor(Math.random()*iconos.length)];
+
+    estrella.style.left=Math.random()*100+"vw";
+
+    estrella.style.fontSize=(18+Math.random()*20)+"px";
+
+    estrella.style.animationDuration=(4+Math.random()*5)+"s";
+
+    document.body.appendChild(estrella);
+
+    setTimeout(()=>{
+
+        estrella.remove();
+
+    },9000);
+
+}
+
+setInterval(crearEstrella,250);
+
+/* ===== DESTELLOS ===== */
+
+function crearDestellos(){
+
+    for(let i=0;i<40;i++){
+
+        const d=document.createElement("div");
+
+        d.className="destello";
+
+        d.style.left=Math.random()*window.innerWidth+"px";
+
+        d.style.top=Math.random()*window.innerHeight+"px";
+
+        d.style.animationDelay=Math.random()*2+"s";
+
+        document.body.appendChild(d);
+
+        setTimeout(()=>{
+
+            d.remove();
+
+        },3000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

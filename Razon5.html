@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Razón #5 ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ff0844,#ff5f6d,#ff758c,#ff7eb3);
+background-size:400% 400%;
+animation:fondo 12s infinite alternate;
+overflow-x:hidden;
+color:white;
+
+}
+
+@keyframes fondo{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+header{
+
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:20px;
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+nav ul{
+
+display:flex;
+justify-content:center;
+gap:20px;
+list-style:none;
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+padding:12px 20px;
+border-radius:30px;
+transition:.4s;
+
+}
+
+nav a:hover{
+
+background:#fff;
+color:#ff4d6d;
+transform:translateY(-5px);
+
+}
+
+.contenedor{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:50px;
+text-align:center;
+
+}
+
+h1{
+
+font-size:60px;
+text-shadow:0 0 25px white;
+margin-bottom:20px;
+
+}
+
+.subtitulo{
+
+font-size:24px;
+margin-bottom:40px;
+
+}
+
+/* CORAZÓN */
+
+.corazon{
+
+font-size:180px;
+cursor:pointer;
+animation:latir 1.4s infinite;
+filter:drop-shadow(0 0 30px #fff);
+transition:1s;
+
+}
+
+@keyframes latir{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.15);}
+100%{transform:scale(1);}
+
+}
+
+.corazon:hover{
+
+transform:scale(1.2);
+
+}
+
+.mensaje{
+
+display:none;
+margin-top:40px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:25px;
+font-size:22px;
+line-height:1.8;
+
+}
+
+#texto{
+
+white-space:pre-line;
+
+}
+/* ===== FOTO ===== */
+
+.foto{
+
+width:360px;
+height:360px;
+object-fit:cover;
+display:block;
+margin:40px auto;
+border-radius:25px;
+box-shadow:0 0 35px rgba(255,255,255,.9);
+transition:.5s;
+
+}
+
+.foto:hover{
+
+transform:scale(1.08) rotate(-2deg);
+
+}
+
+/* ===== TARJETA DE MÚSICA ===== */
+
+.spotify-card{
+
+width:800px;
+max-width:95%;
+margin:40px auto;
+display:flex;
+align-items:center;
+gap:20px;
+padding:20px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 25px rgba(255,255,255,.3);
+
+}
+
+.cover{
+
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+
+}
+
+.cover:hover{
+
+transform:scale(1.05) rotate(5deg);
+
+}
+
+.info{
+
+flex:1;
+text-align:left;
+
+}
+
+.info h2{
+
+font-size:30px;
+margin-bottom:10px;
+
+}
+
+.info h3{
+
+font-size:24px;
+margin-bottom:10px;
+
+}
+
+.info p{
+
+font-size:20px;
+margin-bottom:15px;
+
+}
+
+.info audio{
+
+width:100%;
+
+}
+
+/* ===== TE AMO ===== */
+
+.teamo{
+
+font-size:70px;
+font-weight:bold;
+margin-top:40px;
+display:none;
+color:white;
+text-shadow:0 0 10px #fff,
+0 0 20px #ff4d6d,
+0 0 40px #ff4d6d,
+0 0 80px #ff1744;
+
+animation:latido 1.5s infinite;
+
+}
+
+/* ===== BOTONES ===== */
+
+.botones{
+
+margin-top:40px;
+
+}
+
+.botones button{
+
+padding:15px 35px;
+margin:10px;
+font-size:20px;
+border:none;
+border-radius:35px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.botones button:hover{
+
+transform:scale(1.08);
+
+background:#ff1744;
+
+}
+
+/* ===== CORAZONES ===== */
+
+.lluvia{
+
+position:fixed;
+top:-30px;
+font-size:28px;
+pointer-events:none;
+animation:caer linear forwards;
+
+}
+
+@keyframes caer{
+
+0%{
+
+transform:translateY(-100px);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh);
+
+opacity:0;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.foto{
+
+width:280px;
+height:280px;
+
+}
+
+.spotify-card{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.info{
+
+text-align:center;
+
+}
+
+.cover{
+
+width:150px;
+height:150px;
+
+}
+
+.corazon{
+
+font-size:120px;
+
+}
+
+.teamo{
+
+font-size:45px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<ul>
+
+<li><a href="Inicio.html">🏠 Inicio</a></li>
+<li><a href="Razon1.html">❤️ Razón 1</a></li>
+<li><a href="Razon2.html">🕰️ Razón 2</a></li>
+<li><a href="Razon3.html">🌙 Razón 3</a></li>
+<li><a href="Razon4.html">🌹 Razón 4</a></li>
+<li><a href="Razon5.html">💖 Final</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<div class="contenedor">
+
+<h1>❤️ La Última Razón ❤️</h1>
+
+<p class="subtitulo">
+
+Haz clic en el corazón...
+
+</p>
+
+<div class="corazon" id="corazon" onclick="abrirFinal()">
+
+❤️
+
+</div>
+
+<div class="mensaje" id="mensaje">
+
+<h2>💖 Gracias por existir 💖</h2>
+
+<br>
+
+<p id="texto"></p>
+
+<img src="Imagenes/imagen8.jpg" class="foto">
+
+<div class="spotify-card">
+
+<img src="Portada/portada6.jfif" class="cover">
+
+<div class="info">
+
+
+
+<h3>Tu y yo </h3>
+
+<p>La misma gente</p>
+
+<audio controls>
+
+<source src="musica/La_Misma_Gente_-_Tu_y_Yo_(mp3.pm).mp3" type="audio/mpeg">
+
+</audio>
+
+</div>
+
+</div>
+
+<h1 class="teamo" id="teamo">
+
+❤️ TE AMO ❤️
+
+</h1>
+
+<div class="botones">
+
+<a href="razon4.html">
+
+<button>⬅️ Anterior</button>
+
+</a>
+
+<a href="index.html">
+
+<button>🏠 Volver al Inicio</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+<script>
+
+const mensaje = `
+
+❤️ Gracias por llegar a mi vida ❤️
+
+
+
+
+
+Gracias por tu paciencia.
+
+Gracias por tu cariño.
+
+Gracias por hacerme sonreír.
+
+Gracias por convertirte
+en la persona más especial
+que existe para mí.
+
+Prometo seguir creando
+recuerdos contigo,
+apoyarte en todo momento
+y hacerte feliz siempre que pueda.
+
+Espero que esta pequeña sorpresa
+te haya sacado una sonrisa.
+
+Te amo con todo mi corazón,
+
+
+❤️ Te amo un monto mi negra preciosa ❤️
+
+`;
+
+let i = 0;
+
+function abrirFinal(){
+
+    const corazon = document.getElementById("corazon");
+
+    corazon.style.transform="scale(1.6)";
+    corazon.style.filter="drop-shadow(0 0 60px white)";
+
+    crearLluvia();
+
+    setTimeout(()=>{
+
+        corazon.style.display="none";
+
+        document.getElementById("mensaje").style.display="block";
+
+        escribir();
+
+    },1000);
+
+}
+
+function escribir(){
+
+    if(i < mensaje.length){
+
+        document.getElementById("texto").innerHTML += mensaje.charAt(i);
+
+        i++;
+
+        setTimeout(escribir,35);
+
+    }else{
+
+        setTimeout(()=>{
+
+            document.getElementById("teamo").style.display="block";
+
+        },1000);
+
+    }
+
+}
+
+/* ❤️ LLUVIA DE CORAZONES ❤️ */
+
+function crearLluvia(){
+
+    for(let i=0;i<80;i++){
+
+        const corazon=document.createElement("div");
+
+        corazon.classList.add("lluvia");
+
+        const iconos=["❤️","💖","💕","💗","💞","✨"];
+
+        corazon.innerHTML=iconos[Math.floor(Math.random()*iconos.length)];
+
+        corazon.style.left=Math.random()*100+"vw";
+
+        corazon.style.fontSize=(20+Math.random()*25)+"px";
+
+        corazon.style.animationDuration=(4+Math.random()*5)+"s";
+
+        corazon.style.animationDelay=Math.random()*2+"s";
+
+        document.body.appendChild(corazon);
+
+        setTimeout(()=>{
+
+            corazon.remove();
+
+        },9000);
+
+    }
+
+}
+
+/* ❤️ Corazones cayendo continuamente ❤️ */
+
+setInterval(()=>{
+
+    const c=document.createElement("div");
+
+    c.classList.add("lluvia");
+
+    c.innerHTML=["❤️","💖","💕","✨"][Math.floor(Math.random()*4)];
+
+    c.style.left=Math.random()*100+"vw";
+
+    c.style.fontSize=(18+Math.random()*18)+"px";
+
+    c.style.animationDuration=(5+Math.random()*4)+"s";
+
+    document.body.appendChild(c);
+
+    setTimeout(()=>{
+
+        c.remove();
+
+    },9000);
+
+},300);
+
+</script>
+
+</body>
+</html>
